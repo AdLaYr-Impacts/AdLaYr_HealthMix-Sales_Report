@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AdLaYr HealthMix | Sales Record</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-section">
+        <h2>AdLaYr HealthMix</h2>
+        <h4>Sales Record</h4>
+        <form id="salesForm">
+            <div class="mb-3">
+            <label for="date" class="form-label">Date</label>
+            <input type="date" class="form-control" id="date" name="Date" required>
+            </div>
+            <div class="mb-3">
+            <label for="customerName" class="form-label">Customer Name</label>
+            <input type="text" class="form-control" id="customerName" name="Customer Name" placeholder="Enter customer name" required>
+            </div>
+            <div class="mb-3">
+            <label for="phone" class="form-label">Customer Phone</label>
+            <input type="tel" class="form-control" id="phone" name="Phone" placeholder="Enter phone number">
+            </div>
+            <div class="mb-3">
+            <label for="product" class="form-label">Product Name</label>
+            <select class="form-select" id="product" name="Product">
+                <option selected>HoneyMix 250g</option>
+                <option>HoneyMix 500g</option>
+                <option>HoneyMix 1kg</option>
+            </select>
+            </div>
+            <div class="mb-3">
+            <label for="quantity" class="form-label">Quantity</label>
+            <input type="number" class="form-control" id="quantity" name="Quantity" placeholder="No. of items sold" min="1" required>
+            </div>
+            <div class="mb-3">
+            <label for="amount" class="form-label">Amount (₹)</label>
+            <input type="number" class="form-control" id="amount" name="Amount" placeholder="Total sale amount" required>
+            </div>
+            <div class="mb-3">
+            <label for="paymentMode" class="form-label">Payment Mode</label>
+            <select class="form-select" id="paymentMode" name="Payment Mode">
+                <option>Cash</option>
+                <option>UPI</option>
+                <option>Card</option>
+                <option>Pending</option>
+                <option>Other</option>
+            </select>
+            </div>
+            <button type="submit" class="btn btn-custom">Submit Record</button>
+        </form>
+        <div id="successMessage" class="alert alert-success mt-3">✅ Record added successfully!</div>
+        <div id="errorMessage" class="alert alert-danger mt-3">⚠️ Failed to submit. Try again.</div>
+        </div>
+    </div>
+    <script src="./script.js"> </script>
+</body>
+</html>
